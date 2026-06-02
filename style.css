@@ -656,3 +656,142 @@ button {
   color: #9ca3af;
   line-height: 1.5;
 }
+.beneficios {
+  padding: 140px 80px;
+  background: radial-gradient(circle at top, #0b1220, #050a14);
+}
+
+.beneficios .top {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.beneficios .tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,106,0,0.4);
+  color: #ff6a00;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.beneficios h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.beneficios p {
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.beneficios .divider {
+  width: 80px;
+  height: 2px;
+  background: #ff6a00;
+  margin: 25px auto 0;
+  position: relative;
+}
+
+.beneficios .divider::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #ff6a00;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  transform: translateX(-50%);
+}
+
+.beneficios .grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.beneficios .image-box {
+  position: relative;
+}
+
+.beneficios .image-box img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+
+  transform: translateY(-60px);
+}
+
+.beneficios .image-badge {
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  backdrop-filter: blur(10px);
+}
+
+.beneficios .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 80px;
+  width: 120%;
+}
+
+.beneficios .card {
+  display: flex;
+  gap: 18px;
+
+  padding: 18px 24px;
+
+  min-height: 80px;
+
+  border-radius: 18px;
+  background: rgba(20, 30, 50, 0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  align-items: flex-start;
+  transition: 0.3s;
+}
+
+.beneficios .card:hover {
+  transform: translateY(-5px);
+  background: rgba(25, 35, 60, 0.8);
+}
+
+.beneficios .icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.beneficios .icon img {
+  width: 20px;
+}
+
+.icon.orange { background: rgba(255,106,0,0.15); }
+.icon.green { background: rgba(34,197,94,0.15); }
+.icon.red { background: rgba(239,68,68,0.15); }
+.icon.yellow { background: rgba(250,204,21,0.15); }
+.icon.blue { background: rgba(59,130,246,0.15); }
+.icon.purple { background: rgba(168,85,247,0.15); }
+
+.beneficios .text h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.beneficios .text p {
+  font-size: 13px;
+  color: #9ca3af;
+}

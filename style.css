@@ -795,3 +795,140 @@ button {
   font-size: 13px;
   color: #9ca3af;
 }
+
+.aplicacao {
+  padding: 140px 80px;
+  background: radial-gradient(circle at top, #0b1220, #050a14);
+}
+
+.aplicacao .top {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.aplicacao .tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,106,0,0.4);
+  color: #ff6a00;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.aplicacao h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.aplicacao p {
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.aplicacao .divider {
+  width: 80px;
+  height: 2px;
+  background: #ff6a00;
+  margin: 25px auto 0;
+  position: relative;
+}
+
+.aplicacao .divider::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #ff6a00;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  transform: translateX(-50%);
+}
+
+.aplicacao .grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.aplicacao .image-box {
+  position: relative;
+}
+
+.aplicacao .image-box img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  transform: translateY(-130px);
+}
+
+.aplicacao .image-badge {
+  position: absolute;
+  bottom: 140px;
+  left: 20px;
+  background: rgba(255,106,0,0.15);
+  border: 1px solid rgba(255,106,0,0.3);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ff6a00;
+}
+
+.aplicacao .list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.aplicacao .item {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(20, 30, 50, 0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  align-items: center;
+}
+
+.aplicacao .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.aplicacao .icon img {
+  width: 24px;
+}
+
+.icon.blue { background: rgba(59,130,246,0.15); }
+.icon.orange { background: rgba(255,106,0,0.15); }
+.icon.purple { background: rgba(168,85,247,0.15); }
+.icon.yellow { background: rgba(255,193,7,0.15); }
+
+.aplicacao .number {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ff6a00;
+  color: white;
+  font-size: 10px;
+  padding: 4px 7px;
+  border-radius: 50%;
+}
+
+.aplicacao .text h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.aplicacao .text p {
+  font-size: 13px;
+  color: #9ca3af;
+}

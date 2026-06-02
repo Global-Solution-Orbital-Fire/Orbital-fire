@@ -594,3 +594,65 @@ button {
   font-size: 13px;
   color: #9ca3af;
 }
+
+.dados {
+  padding: 120px 80px;
+  background: radial-gradient(circle at top, #0b1220, #050a14);
+}
+
+.dados .top {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.dados .tag {
+  display: inline-block;
+  font-size: 12px;
+  color: #ff6a00;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.dados h2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.dados .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.dados .card {
+  padding: 35px 25px;
+  border-radius: 18px;
+  text-align: center;
+  background: rgba(15, 25, 45, 0.6);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s;
+}
+
+.dados .card:hover {
+  transform: translateY(-5px);
+  background: rgba(20, 30, 50, 0.8);
+}
+
+.dados h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: none;
+  box-shadow: none;
+}
+
+.orange { color: #ff6a00; }
+.yellow { color: #facc15; }
+.green { color: #22c55e; }
+.blue { color: #60a5fa; }
+
+.dados p {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.5;
+}

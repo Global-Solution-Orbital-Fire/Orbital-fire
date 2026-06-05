@@ -148,3 +148,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loadQuestion();
 });
+
+function setTheme(color) {
+  if (color === "dark") document.body.style.background = "#000";
+  if (color === "blue") document.body.style.background = "#0a0f1a";
+  if (color === "green") document.body.style.background = "#001a0f";
+}

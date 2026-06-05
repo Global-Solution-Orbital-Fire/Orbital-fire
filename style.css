@@ -1045,7 +1045,9 @@ button {
 
 .faq {
   padding: 140px 80px;
-  background: var(--bg-gradient-main);
+  background: linear-gradient(
+    to bottom,var(--bg-gradient-start), var(--bg-gradient-end)
+  );
 }
 
 .faq .top {
@@ -1123,10 +1125,14 @@ button {
   border-color: var(--primary-40);
 }
 
+.faq-question span {
+  transition: transform 0.3s ease;
+}
+
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: max-height 0.4s ease;
 }
 
 .faq-answer p {
@@ -1136,12 +1142,13 @@ button {
 }
 
 .faq-item.active .faq-answer {
-  max-height: 200px;
+  max-height: 500px; 
 }
 
 .faq-item.active .faq-question span {
   transform: rotate(180deg);
 }
+
 
 .cta {
   padding: 140px 20px;

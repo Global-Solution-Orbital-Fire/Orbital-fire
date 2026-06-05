@@ -44,3 +44,30 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 3000);
+
+const form = document.querySelector("#form");
+
+if (form) {
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const inputs = form.querySelectorAll("input, textarea");
+    let valid = true;
+
+    inputs.forEach(input => {
+      if (input.value.trim() === "") {
+        valid = false;
+        input.style.border = "1px solid red";
+      } else {
+        input.style.border = "1px solid green";
+      }
+    });
+
+    if (valid) {
+      alert("Formulário enviado com sucesso!");
+      form.reset();
+    } else {
+      alert("Preencha todos os campos!");
+    }
+  });
+}

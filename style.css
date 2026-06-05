@@ -766,7 +766,7 @@ button {
 
 .publico {
   padding: 140px 80px;
-  background: var(--bg-section);
+  background: var(--bg-secondary);
 }
 
 .publico .top {
@@ -827,13 +827,39 @@ button {
   padding: 25px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  transition: 0.3s;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .publico .card:hover {
   border-color: var(--primary-40);
   transform: translateY(-5px);
-  background: var(--bg-card);
+}
+
+.publico .card.active {
+  transform: scale(1.1);
+  z-index: 10;
+  border: 2px solid var(--primary);
+}
+
+.publico .card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.publico .card .extra {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.publico .card.active .extra {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 10px;
+  border-top: 1px solid var(--white-20);
 }
 
 .publico .icon {

@@ -154,3 +154,26 @@ function setTheme(color) {
   if (color === "blue") document.body.style.background = "#0a0f1a";
   if (color === "green") document.body.style.background = "#001a0f";
 }
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+
+    const isActive = card.classList.contains("active");
+
+    cards.forEach(c => {
+      c.classList.remove("active", "hidden");
+    });
+
+    if (!isActive) {
+      card.classList.add("active");
+
+      cards.forEach(c => {
+        if (c !== card) {
+          c.classList.add("hidden");
+        }
+      });
+    }
+  });
+});

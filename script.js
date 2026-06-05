@@ -71,3 +71,80 @@ if (form) {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const quizData = [
+    { question: "O que causa a maioria das queimadas?", options: ["Naturais", "Humanas", "Animais"], answer: "Humanas" },
+    { question: "Qual sensor detecta fumaça?", options: ["MQ2", "DHT11", "LCD"], answer: "MQ2" },
+    { question: "O DHT11 mede:", options: ["Velocidade", "Temperatura e umidade", "Pressão"], answer: "Temperatura e umidade" },
+    { question: "O sistema usa:", options: ["IA", "Nada", "Somente sensores"], answer: "IA" },
+    { question: "Satélites fazem:", options: ["Monitoramento", "Construção", "Plantio"], answer: "Monitoramento" },
+    { question: "Objetivo principal:", options: ["Destruir", "Prevenir", "Ignorar"], answer: "Prevenir" },
+    { question: "Tempo de detecção:", options: ["Horas", "Minutos", "Segundos"], answer: "Segundos" },
+    { question: "Quem usa o sistema?", options: ["Bombeiros", "Gamers", "Cantores"], answer: "Bombeiros" },
+    { question: "IoT significa:", options: ["Internet das Coisas", "Rede social", "Sistema"], answer: "Internet das Coisas" },
+    { question: "Benefício principal:", options: ["Mais fogo", "Proteção", "Poluição"], answer: "Proteção" }
+  ];
+
+  let currentQuestion = 0;
+  let score = 0;
+
+  let questionEl = document.getElementById("question");
+  let optionsEl = document.getElementById("options");
+  const quizContainer = document.getElementById("quiz");
+
+  function loadQuestion() {
+    const current = quizData[currentQuestion];
+
+    questionEl.innerText = current.question;
+    optionsEl.innerHTML = "";
+
+    current.options.forEach(option => {
+      const btn = document.createElement("button");
+      btn.innerText = option;
+      btn.classList.add("option-btn");
+
+      btn.onclick = () => {
+        if (option === current.answer) {
+          score++;
+        }
+
+        currentQuestion++;
+
+        if (currentQuestion < quizData.length) {
+          loadQuestion();
+        } else {
+          showResult();
+        }
+      };
+
+      optionsEl.appendChild(btn);
+    });
+  }
+
+  function showResult() {
+  const quizContainer = document.getElementById("quiz");
+
+  quizContainer.innerHTML = `
+    <h2>Você acertou ${score} de ${quizData.length}</h2>
+    <button id="restart-btn">Refazer Quiz</button>
+  `;
+
+  document.getElementById("restart-btn").onclick = () => {
+    currentQuestion = 0;
+    score = 0;
+    quizContainer.innerHTML = `
+      <h3 id="question"></h3>
+      <div id="options"></div>
+    `;
+
+    questionEl = document.getElementById("question");
+    optionsEl = document.getElementById("options");
+
+    loadQuestion();
+  };
+}
+
+  loadQuestion();
+});

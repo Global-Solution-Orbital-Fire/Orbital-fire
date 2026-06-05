@@ -261,6 +261,117 @@ button {
   opacity: 1;
 }
 
+.quiz-section {
+  position: relative;
+  padding: 120px 20px;
+  overflow: hidden;
+  text-align: center;
+  color: var(--text-main);
+   background: radial-gradient(
+    circle at top,var(--bg-gradient-start),var(--bg-gradient-end) 70%
+  );
+}
+
+.quiz-section h2 {
+  margin-bottom: 50px;
+  font-size: 2.2rem;
+}
+
+.quiz-section::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: var(--primary-15);
+  filter: blur(120px);
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.quiz-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: var(--blue-15);
+  filter: blur(120px);
+  bottom: -100px;
+  right: -100px;
+  z-index: 0;
+}
+
+#quiz {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 45px;
+  border-radius: 20px;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.7),
+    inset 0 0 20px var(--white-02);
+  border: 1px solid var(--border);
+}
+
+#question {
+  font-size: 1.7rem;
+  margin-bottom: 35px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.option-btn {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+
+  background: linear-gradient(145deg,
+    rgba(26, 35, 51, 0.8),
+    rgba(15, 23, 38, 0.8));
+  color: var(--text-main);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+}
+
+.option-btn:hover {
+  border-color: var(--primary);
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px var(--primary-40);
+}
+
+.option-btn:active {
+  transform: scale(0.97);
+}
+
+#restart-btn {
+  margin-top: 25px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#restart-btn:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--primary-20);
+}
 
 .problema {
   padding: 120px 80px;

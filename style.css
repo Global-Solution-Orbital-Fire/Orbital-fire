@@ -766,7 +766,7 @@ button {
 
 .publico {
   padding: 140px 80px;
-  background: var(--bg-secondary);
+    background: var(--bg-section);
 }
 
 .publico .top {
@@ -1467,7 +1467,7 @@ button {
 
 #form textarea {
   min-height: 120px;
-  resize: vertical; /* melhor UX */
+  resize: vertical; 
 }
 
 #form button {
